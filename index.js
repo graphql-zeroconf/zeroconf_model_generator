@@ -86,7 +86,7 @@ const generateIndex = (cmd) => {
   args.push(`-a ${zeroConfPath}/.model.json`);
   args.push(`-c ${zeroConfPath}/.option.json`);
 
-  const sequelizeAutoPath = path.resolve(__dirname, 'node_modules/sequelize-auto/bin');
+  const sequelizeAutoPath = path.resolve(process.cwd(), 'node_modules/sequelize-auto/bin');
   const cmd = `${sequelizeAutoPath}/sequelize-auto ${args.join(' ')}`;
   console.log(cmd);
   await run(cmd);
