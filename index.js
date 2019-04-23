@@ -70,7 +70,7 @@ const generateIndex = (cmd) => {
   } = sequelizeConfig;
 
   await writeJsonFile(`${zeroConfPath}/.model.json`, option.additional);
-  await writeJsonFile(`${zeroConfPath}/.zeroconf/.option.json`, option);
+  await writeJsonFile(`${zeroConfPath}/.option.json`, option);
 
   const args = [];
   args.push(`-o ${modelPath}`);
